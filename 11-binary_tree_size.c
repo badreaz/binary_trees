@@ -2,11 +2,11 @@
 
 /**
  * binary_tree_size - measure the size of a binary tree
- * @trre: tree to measure size of.
+ * @tree: tree to measure size of.
  *
  * Return: size of the tree, otherwise 0.
  */
-size_t binary_tree_size(count binary_tree_t *tree)
+size_t binary_tree_size(const binary_tree_t *tree)
 {
 	size_t ans = 0;
 
