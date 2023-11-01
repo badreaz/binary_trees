@@ -12,8 +12,8 @@ void print_level(const binary_tree_t *tree, int level, void (*func)(int))
 	{
 		if (level == 1)
 			func(tree->n);
-		print_level(root->left, level - 1, func);
-		print_level(root->right, level - 1, func);
+		print_level(tree->left, level - 1, func);
+		print_level(tree->right, level - 1, func);
 	}
 }
 
