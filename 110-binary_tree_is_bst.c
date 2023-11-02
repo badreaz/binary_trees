@@ -5,7 +5,7 @@
  *  binary search tree
  * @tree: tree to check.
  *
- * Return 1 if tree is bst, otherwise 0.
+ * Return: 1 if tree is bst, otherwise 0.
  */
 int binary_tree_is_bst(const binary_tree_t *tree)
 {
