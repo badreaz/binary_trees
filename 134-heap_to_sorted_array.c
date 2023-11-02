@@ -10,7 +10,7 @@
  */
 int *heap_to_sorted_array(heap_t *heap, size_t *size)
 {
-	heap[0] = 0;
+	heap++;
 	size++;
 	return (NULL);
 }
