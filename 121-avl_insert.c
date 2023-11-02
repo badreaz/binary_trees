@@ -42,29 +42,28 @@ int balance(avl_t *node)
  */
 avl_t *avl_insert(avl_t **tree, int value)
 {
-	avl_t *new, *y, *x, *tmp;
-	int h;
+	avl_t *new = NULL, *y = NULL, *x, *tmp;
 
 	if (!tree)
 		return (NULL);
 	tmp = *tree;
-	while (tmp && tmp->left)
+	while (tmp)
 	{
+		y = tmp;
 		if (value < tmp->n)
 			tmp = tmp->left;
 		else
 			tmp = tmp->right;
 	}
-	if (!tmp)
-		*tree = binary_tree_node(y, value);
-	else if (value < tmp->n)
-		tmp->left = binary_tree_node(y, value);
+	if (!y)
+		new = *tree = binary_tree_node(y, value);
+	else if (value < y->n)
+		new = y->left = binary_tree_node(y, value);
 	else
-		tmp->right = binary_tree_node(y, value);
-	y = tmp, tmp = new;
+		new = y->right = binary_tree_node(y, value);
+	tmp = new;
 	while (y)
 	{
-		h = height(y->left) > height(y->right) ? height(y->left) : hight(y->right);
 		x = y->parent;
 		if (balance(x) <= -2 || balance(x) >= 2)
 		{
