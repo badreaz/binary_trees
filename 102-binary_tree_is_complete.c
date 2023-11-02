@@ -1,9 +1,17 @@
 #include "binary_trees.h"
 
-struct queue_s {
+/**
+ * struct queue_s - binary tree queue
+ *
+ * @node: pointer to binary_tree_t.
+ * @next: pointer to the next node.
+ */
+struct queue_s
+{
 	binary_tree_t *node;
 	struct queue_s *next;
-} queue_t;
+};
+typedef struct queue_s queue_t;
 
 /**
  * create - create a new node in queque.
