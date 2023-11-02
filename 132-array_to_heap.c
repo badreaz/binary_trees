@@ -9,7 +9,7 @@
  */
 heap_t *array_to_heap(int *array, size_t size)
 {
-	array++;
+	array[0] = 0;
 	size++;
 	return (NULL);
 }
