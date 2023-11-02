@@ -9,7 +9,7 @@
  */
 heap_t *heap_insert(heap_t **root, int value)
 {
-	*root++;
+	root++;
 	value++;
 	return (NULL);
 }
