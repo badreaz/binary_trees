@@ -17,6 +17,8 @@ bst_t *bst_insert(bst_t **tree, int value)
 	while (ptr)
 	{
 		tmp = ptr;
+		if (value == ptr->n)
+			return (NULL);
 		if (value < ptr->n)
 			ptr = ptr->left;
 		else
