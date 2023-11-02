@@ -3,7 +3,7 @@
 /**
  * heap_to_sorted_array - converts a binary max heap
  *  to a sorted array of integers
- * #heap: pointer to the root.
+ * @heap: pointer to the root.
  * @size: address to store the size of the array.
  *
  * Return: array is desceending order.
